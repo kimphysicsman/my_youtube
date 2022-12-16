@@ -8,8 +8,8 @@ class TestVideoChartView(TestCase):
     """
 
 
-    def test_get_video_chart_most_popular(self):
-        video_ids = get_video_chart_most_popular()
+    # def test_get_video_chart_most_popular(self):
+    #     video_ids = get_video_chart_most_popular()
 
-        for video_id in video_ids:
-            print(video_id)
+    #     for video_id in video_ids:
+    #         print(video_id)
