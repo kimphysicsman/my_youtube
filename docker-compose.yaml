@@ -18,10 +18,9 @@ services:
     image: postgres:14.4-alpine
     volumes:
       - postgres_db:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_DB=my_youtube_db
-      - POSTGRES_USER=my_youtube_user
-      - POSTGRES_PASSWORD=my_youtube_password
+    env_file:
+      - ./.env.postgres
+
     ports:
       - "5432:5432"
 
