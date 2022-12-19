@@ -23,7 +23,7 @@ services:
     volumes:
       - ./certbot-etc:/etc/letsencrypt
       - ./myweb:/usr/share/nginx/html
-    command: certonly --dry-run --webroot --webroot-path=/usr/share/nginx/html --email kimphysicsman@gmail.com --agree-tos --no-eff-email --keep-until-expiring -d kimphysicsman.shop -d www.kimphysicsman.shop
+    command: certonly --webroot --webroot-path=/usr/share/nginx/html --email kimphysicsman@gmail.com --agree-tos --no-eff-email --keep-until-expiring -d kimphysicsman.shop -d www.kimphysicsman.shop
 
   web:
     build: .
