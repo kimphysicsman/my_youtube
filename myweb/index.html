@@ -1,1 +1,80 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--css 파일 불러오기!-->
+    <link href="../css/common.css" rel="stylesheet" type="text/css" />
+
+    <!--js 파일 불러오기-->
+    <script defer src="../js/common.js"></script>
+
+    <!--파비콘 적용-->
+    <link rel="shortcut icon" href="" />
+
+    <title>My Youtube</title>
+    <script></script>
+  </head>
+  <body>
+    <header>동우의 연습공간</header>
+
+    <main>
+      <div class="youtube_box">
+        <div class="button_box">
+          <button>인기동영상보기</button>
+        </div>
+        <div class="info_box">
+          <div class="video_box">
+            <iframe
+              id="ytplayer"
+              type="text/html"
+              width="640"
+              height="360"
+              src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com"
+              frameborder="0"
+            ></iframe>
+          </div>
+          <div class="chart_box">
+            <p>인기동영상 차트</p>
+            <p id="date">12:12:12</p>
+            <p id="rank_1">123</p>
+            <p id="rank_2">456</p>
+            <p id="rank_3">789</p>
+            <p id="rank_4">123</p>
+            <p id="rank_5">456</p>
+            <button>저장하기</button>
+          </div>
+        </div>
+        <div class="chart_list_box">
+          <p>다른 인기동영상 차트</p>
+
+          <div>
+            <div id="chart_1">
+              날짜 : 12:12:12 <br /><br />
+              1위: 123 <br />
+              2위: 456<br />
+              3위: 7678<br />
+              4위: 123<br />
+              5위:124
+            </div>
+            <div id="chart_2"></div>
+            <div id="chart_3"></div>
+            <div id="chart_4"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      kimphysicsman@gmail.com <br />
+      github.com/kimphysicsman <br />
+      velog.io/@kimphysicsman
+    </footer>
+  </body>
+</html>
