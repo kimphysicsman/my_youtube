@@ -23,8 +23,13 @@ def get_video_chart_most_popular():
 
     # return item_ids
 
-    return ["temp_1", "temp_2", "temp_3", "temp_4", "temp_5"]
-
+    return {
+        "rank_1" : "Mxkg3qLIPC8",
+        "rank_2" : "Z8mOxhAjyqQ",
+        "rank_3" : "HkvQywg_uZA",
+        "rank_4" : "-lsFs2615gw",
+        "rank_5" : "bK6ldnjE3Y0"
+    }
 
 def save_video_chart(video_chart):
 

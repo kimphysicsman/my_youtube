@@ -30,22 +30,6 @@ main {
   margin: auto;
 }
 
-.youtube_box .button_box {
-  width: 100%;
-  height: 50px;
-
-  margin: 10px 0px 10px 0px;
-
-  display: flex;
-  flex-direction: row;
-  align-items: normal;
-  justify-content: space-around;
-}
-
-.youtube_box .button_box button {
-  width: 150px;
-}
-
 .youtube_box .info_box {
   width: 100%;
   height: auto;

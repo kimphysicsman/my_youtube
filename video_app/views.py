@@ -24,7 +24,7 @@ class VideoChartView(APIView):
         except:
             return Response({"error": "조회에 실패했습니다."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-        return Response({"video_ids": video_ids}, status=status.HTTP_200_OK)
+        return Response(video_ids, status=status.HTTP_200_OK)
 
     def post(self, request):
         """
