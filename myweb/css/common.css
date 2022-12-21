@@ -1,0 +1,150 @@
+header {
+  width: 95%;
+  height: 30px;
+
+  margin: 0px auto 0px auto;
+  padding: 10px;
+
+  /* border: 1px solid #8e8e8e; */
+  box-shadow: 1px 1px 3px gray;
+
+  font-size: 20px;
+  text-align: center;
+}
+
+main {
+  width: 1000px;
+  height: 1000px;
+
+  margin: 20px auto 20px auto;
+  padding: 20px;
+
+  border: 1px solid #8e8e8e;
+  box-shadow: 1px 1px 5px gray;
+}
+
+.youtube_box {
+  width: 100%;
+  height: auto;
+
+  margin: auto;
+}
+
+.youtube_box .info_box {
+  width: 100%;
+  height: auto;
+
+  margin: 10px 0px 10px 0px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: normal;
+  justify-content: space-between;
+}
+
+.youtube_box .info_box .video_box {
+  width: 70%;
+  padding-top: 20px;
+}
+
+.youtube_box .info_box .chart_box {
+  width: 30%;
+}
+
+.youtube_box .info_box .chart_box .chart_title {
+  width: 90%;
+  height: 40px;
+
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+
+  font-size: 20px;
+  padding: 0px;
+  text-align: center;
+  background-color: bisque;
+
+  box-shadow: 1px 1px 5px gray;
+}
+
+.youtube_box .info_box .chart_box p {
+  width: 90%;
+  height: 7%;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+
+  cursor: pointer;
+  box-shadow: 1px 1px 5px gray;
+}
+
+.youtube_box .info_box .chart_box button {
+  width: 70%;
+  height: 10%;
+
+  margin: auto;
+  display: block;
+
+  font-size: 20px;
+  text-align: center;
+}
+
+.youtube_box .chart_list_box {
+  width: 90%;
+  height: 200px;
+
+  padding: 20px;
+}
+
+.youtube_box .chart_list_box .other_chart_list_box {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: row;
+  align-items: normal;
+  justify-content: space-between;
+}
+
+.youtube_box .chart_list_box .other_chart_list_box div {
+  width: 20%;
+  height: 100%;
+
+  padding: 10px;
+
+  border: 1px solid #8e8e8e;
+  box-shadow: 1px 1px 5px gray;
+}
+
+.other_chart_list_box div p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+footer {
+  width: 95%;
+  height: auto;
+
+  margin: 0px auto 100px auto;
+  padding: 10px 100px 10px 10px;
+
+  /* border: 1px solid #8e8e8e; */
+  /* box-shadow: 1px 1px 3px gray; */
+
+  font-size: 15px;
+  text-align: right;
+  color: #5e5e5e;
+}
