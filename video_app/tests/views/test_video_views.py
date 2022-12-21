@@ -1,3 +1,5 @@
+import time
+
 from django.urls import reverse
 
 from rest_framework.test import APITestCase
@@ -21,7 +23,9 @@ class TestVideoChartView(APITestCase):
             }
 
         ChartModel.objects.create(**temp)
+        time.sleep(1)
         ChartModel.objects.create(**temp)
+        time.sleep(1)
         ChartModel.objects.create(**temp)        
 
 

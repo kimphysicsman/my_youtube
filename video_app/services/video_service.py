@@ -52,7 +52,7 @@ def save_video_chart(video_chart):
 
 
 def get_video_chart_list():
-    chart_list = ChartModel.objects.all()
+    chart_list = ChartModel.objects.all().order_by("date").reverse()[:4]
 
     serializer = ChartModelSerializer(chart_list, many=True)
     return serializer.data
