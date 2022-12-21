@@ -125,6 +125,11 @@ main {
 }
 
 .other_chart_list_box div p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+
   margin-top: 5px;
   margin-bottom: 5px;
 }

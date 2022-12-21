@@ -10,7 +10,6 @@ window.onload = () => {
 
   get_chart_list().then((data) => {
     chart_list = data;
-    console.log(chart_list);
     set_chart_list(chart_list);
   });
 };
@@ -77,6 +76,33 @@ function set_video_chart(video_chart) {
       "https://www.youtube.com/embed/" + video_chart[4]["id"]
     );
   });
+
+  document.getElementById("chart_box_btn").addEventListener("click", () => {
+    request_data = {
+      rank_1: video_chart[0]["id"],
+      rank_2: video_chart[1]["id"],
+      rank_3: video_chart[2]["id"],
+      rank_4: video_chart[3]["id"],
+      rank_5: video_chart[4]["id"],
+      rank_1_title: video_chart[0]["title"],
+      rank_2_title: video_chart[1]["title"],
+      rank_3_title: video_chart[2]["title"],
+      rank_4_title: video_chart[3]["title"],
+      rank_5_title: video_chart[4]["title"],
+    };
+    save_video_chart(request_data).then((status) => {
+      if (status == 200) {
+        alert("저장 성공");
+      } else {
+        alert("저장 실패");
+      }
+
+      get_chart_list().then((data) => {
+        chart_list = data;
+        set_chart_list(chart_list);
+      });
+    });
+  });
 }
 
 async function get_chart_list() {
@@ -107,4 +133,22 @@ function set_chart_list(chart_list) {
       ).textContent = title;
     }
   }
+}
+
+async function save_video_chart(video_chart) {
+  let status;
+
+  const url = "api/video/chart";
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(video_chart),
+  }).then((response) => {
+    console.log(response.json());
+    status = response.status;
+  });
+
+  return status;
 }
