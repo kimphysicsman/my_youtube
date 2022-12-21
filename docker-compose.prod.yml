@@ -15,6 +15,7 @@ services:
       - front
       - web
       - db
+    container_name: nginx
 
   certbot:
     depends_on:
@@ -24,16 +25,19 @@ services:
       - ./certbot-etc:/etc/letsencrypt
       - ./myweb:/usr/share/nginx/html
     command: certonly --webroot --webroot-path=/usr/share/nginx/html --email kimphysicsman@gmail.com --agree-tos --no-eff-email --keep-until-expiring -d kimphysicsman.shop -d www.kimphysicsman.shop
+    container_name: certbot
 
   front:
     image: nginx:1.22.0-alpine
     volumes:
       - ./myweb:/usr/share/nginx/html
     restart: always
+    container_name: front
 
   web:
     build: .
-    command: gunicorn my_youtube.wsgi:application --bind 0.0.0.0:8000 --access-logfile web.log
+    #command: python manage.py runserver 0.0.0.0:8000
+    command: gunicorn my_youtube.wsgi:application -c gunicorn.conf.py
     working_dir: /usr/src/app/
     volumes:
       - ./:/usr/src/app/
@@ -42,6 +46,7 @@ services:
     depends_on:
       - db
     restart: always
+    container_name: web
 
   db:
     image: postgres:14.4-alpine
@@ -50,6 +55,7 @@ services:
     env_file:
       - ./.env.postgres.prod
     restart: always
+    container_name: db
 
 volumes:
   postgres_db:
