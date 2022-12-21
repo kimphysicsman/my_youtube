@@ -4,7 +4,7 @@ services:
   nginx:
     image: nginx:1.22.0-alpine
     volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx_dev/nginx.conf:/etc/nginx/nginx.conf
     ports:
       - 80:80
     depends_on:
@@ -18,7 +18,7 @@ services:
 
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: gunicorn my_youtube.wsgi:application --bind 0.0.0.0:8000 --access-logfile web.log
     working_dir: /usr/src/app/
     volumes:
       - ./:/usr/src/app/
