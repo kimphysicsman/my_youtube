@@ -33,7 +33,7 @@ services:
 
   web:
     build: .
-    command: gunicorn my_youtube.wsgi:application --bind 0.0.0.0:8000
+    command: gunicorn my_youtube.wsgi:application --bind 0.0.0.0:8000 --access-logfile web.log
     working_dir: /usr/src/app/
     volumes:
       - ./:/usr/src/app/
