@@ -12,7 +12,12 @@ class TestVideoChartView(APITestCase):
             "rank_2": "test_2",
             "rank_3": "test_3",
             "rank_4": "test_4",
-            "rank_5": "test_5"
+            "rank_5": "test_5",
+            "rank_1_title": "test_1_title",
+            "rank_2_title": "test_2_title",
+            "rank_3_title": "test_3_title",
+            "rank_4_title": "test_4_title",
+            "rank_5_title": "test_5_title",
             }
 
         ChartModel.objects.create(**temp)
@@ -34,7 +39,12 @@ class TestVideoChartView(APITestCase):
             "rank_2": "b",
             "rank_3": "c",
             "rank_4": "d",
-            "rank_5": "e"
+            "rank_5": "e",
+            "rank_1_title": "a_title",
+            "rank_2_title": "b_title",
+            "rank_3_title": "c_title",
+            "rank_4_title": "d_title",
+            "rank_5_title": "e_title",
         }
 
         response = self.client.post(
